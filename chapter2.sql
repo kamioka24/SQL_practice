@@ -5,7 +5,6 @@ CREATE DATABASE shop;
 -- productテーブルの作成
 -- CHARは固定文字列。足りない文字数を空白で埋める。桁数が決まっているものに向いている。
 -- VARCHARは可変長文字列。文字数が足りなくても空白は追加されず文字数分だけの領域を確保。名前などの桁数が変動するものに向く。
--- PRIMARY KEYは主キーの設定。
 CREATE TABLE product (
   product_id     CHAR(4)      NOT NULL,
   name           VARCHAR(20)  NOT NULL,
@@ -13,7 +12,7 @@ CREATE TABLE product (
   price          INTEGER      NOT NULL,
   cost           INTEGER      NOT NULL,
   day            DATE,
-  PRIMARY KEY (product_id)
+  PRIMARY KEY (product_id) -- 主キーの設定
 );
 
 
